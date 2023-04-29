@@ -7,6 +7,22 @@ root.configure(bg="lightblue")
 root.title("bmi calculator")
 root.iconbitmap("questhead")
 
+def calculation():
+
+    weight = weight_entry.get()
+    height = height_entry.get()
+
+    bmi = float(weight) / (float(height) * float(height))
+
+    bmi = round(bmi, 3)
+
+    weight_label.destroy()
+    weight_entry.destroy()
+    weight_reminder.destroy()
+    height_label.destroy()
+    height_entry.destroy()
+    height_reminder.destroy()
+
 
 weight_label = Label(root, text="weight", font=("consolas", 18), bg="lightblue")
 weight_label.place(x=20, y=30)
