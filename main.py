@@ -22,7 +22,13 @@ def calculation():
     height_label.destroy()
     height_entry.destroy()
     height_reminder.destroy()
+    calculation_button.destroy()
 
+    bmi_label = Label(root, text="Your body mass index is:", font=("Times new roman", 25), bg="lightblue")
+    bmi_label.place(x=20, y=60)
+
+    bmi_text = Label(root, text=(bmi), font=("consolas", 40), bg="lightblue", fg="darkblue")
+    bmi_text.place(x=40, y=100)
 
 weight_label = Label(root, text="weight", font=("consolas", 18), bg="lightblue")
 weight_label.place(x=20, y=30)
@@ -43,7 +49,7 @@ height_entry.place(x=110, y=80)
 height_reminder = Label(root, text="meters", font=("consolas", 15, "italic"), bg="lightblue")
 height_reminder.place(x=380, y=80)
 
-calculation_button = Button(root, text="calculate", font=("consolas", 15), bg="white")
+calculation_button = Button(root, text="calculate", font=("consolas", 15), bg="white", command=calculation)
 calculation_button.place(x=20, y=140)
 
 
