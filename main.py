@@ -24,7 +24,7 @@ def calculation():
     height_reminder.destroy()
     calculation_button.destroy()
 
-    bmi_label = Label(root, text="Your body mass index is:", font=("Times new roman", 25), bg="lightblue")
+    bmi_label = Label(root, text="Your body mass index is: ", font=("Times new roman", 25), bg="lightblue")
     bmi_label.place(x=20, y=60)
 
     bmi_text = Label(root, text=(bmi), font=("consolas", 40), bg="lightblue", fg="darkblue")
