@@ -7,6 +7,13 @@ root.configure(bg="lightblue")
 root.title("bmi calculator")
 root.iconbitmap("questhead")
 
+underweight = PhotoImage(file=r"underweight.gif")
+normal = PhotoImage(file=r"normal.gif")
+overweight = PhotoImage(file=r"overweight.gif")
+obese = PhotoImage(file=r"obese.gif")
+extremely_obese = PhotoImage(file=r"extremly_obese.gif")
+
+
 def calculation():
 
     weight = weight_entry.get()
@@ -42,6 +49,7 @@ def calculation():
     if bmi < 18.5:
 
         body_mass_var.set("UNDERWEIGHT")
+
 
     elif bmi >= 18.5 and bmi <= 24.9:
 
