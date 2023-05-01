@@ -39,6 +39,26 @@ def calculation():
     bmi_body_mass_text = Label(root, textvariable=body_mass_var, font=("consolas", 25), bg="lightblue",  fg="darkblue")
     bmi_body_mass_text.place(x=20, y=290)
 
+    if bmi < 18.5:
+
+        body_mass_var.set("UNDERWEIGHT")
+
+    elif bmi >= 18.5 and bmi <= 24.9:
+
+        body_mass_var.set("NORMAL")
+
+    elif bmi >= 25 and bmi <= 29.9:
+
+        body_mass_var.set("OVERWEIGHT")
+
+    elif bmi >= 30 and bmi <= 34.9:
+
+        body_mass_var.set("FAT")
+
+    elif bmi >= 35:
+
+        body_mass_var.set("EXTREMELY FAT")
+
 weight_label = Label(root, text="weight", font=("consolas", 18), bg="lightblue")
 weight_label.place(x=20, y=30)
 
