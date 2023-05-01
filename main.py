@@ -10,13 +10,15 @@ root.iconbitmap("questhead")
 underweight = PhotoImage(file=r"underweight.gif")
 normal = PhotoImage(file=r"normal.gif")
 overweight = PhotoImage(file=r"overweight.gif")
-obese = PhotoImage(file=r"obese.gif")
-extremely_obese = PhotoImage(file=r"extremly_obese.gif")
+fat = PhotoImage(file=r"fat.gif")
+extremely_fat = PhotoImage(file=r"extremly_fat.gif")
 
 
 def calculation():
 
     weight = weight_entry.get()
+
+
     height = height_entry.get()
 
     bmi = float(weight) / (float(height) * float(height))
@@ -49,23 +51,35 @@ def calculation():
     if bmi < 18.5:
 
         body_mass_var.set("UNDERWEIGHT")
-
+        image = Label(root, image=underweight)
+        image.place(x=275, y=150)
 
     elif bmi >= 18.5 and bmi <= 24.9:
 
         body_mass_var.set("NORMAL")
+        image = Label(root, image=normal)
+        image.place(x=275, y=150)
 
     elif bmi >= 25 and bmi <= 29.9:
 
         body_mass_var.set("OVERWEIGHT")
+        image = Label(root, image=overweight)
+        image.place(x=275, y=150)
 
     elif bmi >= 30 and bmi <= 34.9:
 
         body_mass_var.set("FAT")
+        image = Label(root, image=fat)
+        image.place(x=275, y=150)
+
 
     elif bmi >= 35:
 
+        bmi_body_mass_text.configure(font=("consolas", 19))
         body_mass_var.set("EXTREMELY FAT")
+        image = Label(root, image=extremely_fat)
+        image.place(x=275, y=170)
+
 
 weight_label = Label(root, text="weight", font=("consolas", 18), bg="lightblue")
 weight_label.place(x=20, y=30)
