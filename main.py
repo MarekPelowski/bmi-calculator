@@ -30,7 +30,7 @@ def calculation():
     bmi_text = Label(root, text=(bmi), font=("consolas", 40), bg="lightblue", fg="darkblue")
     bmi_text.place(x=40, y=100)
 
-    bmi_body_mass = Label(root, text="You are:", font=("Times New Roman", 15), bg="lightblue")
+    bmi_body_mass = Label(root, text="You are:", font=("Times New Roman", 25), bg="lightblue")
     bmi_body_mass.place(x=20, y=250)
 
 weight_label = Label(root, text="weight", font=("consolas", 18), bg="lightblue")
