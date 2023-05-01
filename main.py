@@ -17,9 +17,22 @@ extremely_fat = PhotoImage(file=r"extremly_fat.gif")
 def calculation():
 
     weight = weight_entry.get()
-
-
     height = height_entry.get()
+
+    if weight == "":
+        weight_label.configure(fg="red")
+        # weight_wrong = Label(root, text="Wrong weight!", fg="red", bg="lightblue",font=("consolas", 7, "bold", "italic"))
+        # weight_wrong.place(x=150, y=62)
+
+    # For, now I didn't know how to do this.
+
+    if height == "":
+        height_label.configure(fg="red")
+        # height_wrong = Label(root, text="Wrong height!", fg="red", bg="lightblue", font=("consolas", 7, "bold", "italic"))
+        # height_wrong.place(x=150, y=115)
+
+    # For, now I didn't know how to do this.
+
 
     bmi = float(weight) / (float(height) * float(height))
 
