@@ -37,7 +37,7 @@ def calculation():
     bmi_body_mass.place(x=20, y=250)
 
     bmi_body_mass_text = Label(root, textvariable=body_mass_var, font=("consolas", 25), bg="lightblue",  fg="darkblue")
-    bmi_body_mass_text.place(x=20, y=290)
+    bmi_body_mass_text.place(x=40, y=290)
 
     if bmi < 18.5:
 
