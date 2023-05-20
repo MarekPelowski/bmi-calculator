@@ -31,7 +31,7 @@ def calculation():
         # height_wrong = Label(root, text="Wrong height!", fg="red", bg="lightblue", font=("consolas", 7, "bold", "italic"))
         # height_wrong.place(x=150, y=115)
 
-    # For, now I didn't know how to do this.
+    # For, now I didn't know how to do this
 
 
     bmi = float(weight) / (float(height) * float(height))
